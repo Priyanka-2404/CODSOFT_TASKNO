@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To Do List Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div>
+                <h1>My To Do List</h1>
+                <p>Organize your tasks and get things done.</p>
+            </div>
+
+            <button class="theme-btn" id="themeBtn">🌙</button>
+        </header>
+
+        <!-- ADD TASK -->
+        <div class="add-task">
+           <input type="text" id="taskInput" placeholder="Enter a new task...">
+
+            <select id="categoryInput">
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <select id="priorityInput">
+                <option value="Low">Low Priority</option>
+                <option value="Medium">Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+
+            <input type="date" id="dateInput" >
+            <button id="addBtn">Add Task</button>
+
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-box">
+            <input type="text"id="searchInput"placeholder="🔍 Search tasks...">
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active"data-filter="all">All </button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed </button>
+        </div>
+
+        <!-- TASK LIST -->
+        <div id="taskList"></div>
+
+        <!-- STATISTICS -->
+        <div class="stats">
+
+            <div class="stat total">
+                <span id="totalCount">0</span>
+                <p>Total</p>
+            </div>
+            <div class="stat completed">
+                <span id="completedCount">0</span>
+                <p>Completed</p>
+            </div>
+            <div class="stat pending">
+                <span id="pendingCount">0</span>
+                <p>Pending</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
